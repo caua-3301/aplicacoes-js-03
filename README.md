@@ -1,2 +1,2 @@
-Aplicações em JS
+# Aplicações em JS
 Aplicações desenvolvidas em JavaScript
