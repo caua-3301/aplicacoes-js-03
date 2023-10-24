@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Select</title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(34, 0, 34);
+        }
+
+        h1 {
+            color: rgb(17, 17, 17);
+        }
+
+        #container {
+            display: flex;
+            width: 360px;
+            height: 480px;
+            margin: 40px auto;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 0 rgb(14, 14, 14);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #add {
+            font: normal bolder 1.5em sans-serif;
+            transition: all .8s;
+            background-color: transparent;
+            border: none;
+            margin-top: 0px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        #add:hover {
+            transform: scale(110%);
+            border-radius: 20%;
+            transition: all .8s;
+        }
+
+        #insert {
+            display: flex;
+            margin-top: 12px;
+            width: 80%;
+            height: 80px;
+            justify-content: space-between;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        #inputs {
+            display: flex;
+            width: 85%;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        #lista-funcionarios {
+            display: flex;
+            padding: 5px;
+            flex-direction: column;
+            background-color: rgba(71, 0, 71, 0.199);
+            border-radius: 15px;
+            overflow-y: scroll;
+            width: 90%;
+            height: 58%;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .lista-info{
+            display: flex;
+            font-size: .9em;
+            justify-content: space-between;
+            flex-direction: column;
+            list-style: none;
+            padding: 6px;
+            margin: 0;
+        }
+
+        .cont-sub{
+            display: flex;
+            width: 100%;
+            background-color: rgba(68, 0, 68, 0.274);
+            border-radius: 10px;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .botoes{
+            display: flex;
+            row-gap: 3px;
+            margin: 6px 22px 0 0;
+            height: 75%;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .botoes button{
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 3px;
+            background-color: rgb(255, 255, 255);
+            transition: all .8s;
+            border: none;
+        }
+
+        .botoes button:hover{
+            transform: scale(108%);
+            transition: all .8s;
+        }
+
+        .botoes button:first-child{
+            color: rgb(23, 80, 23);
+        }
+
+        .botoes button:nth-child(2){
+            color: rgb(104, 42, 42);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <h1 id="title">
+            Banco do Povo
+        </h1>
+        <form id="insert">
+            <div id="inputs">
+                <input type="text" id="nome" placeholder="Nome cliente" required>
+                <input type="text" id="documento" placeholder="Documento" required>
+                <input type="number" id="saldo" placeholder="Saldo" required>
+            </div>
+            <button id="add" type="submit">+</button>
+        </form>
+
+        <section id="lista-funcionarios">   
+            <div class="cont-sub">
+                <ul class="lista-info">
+                    <li><strong>Nome:</strong> Cauã Pires Soares</li>
+                    <li><strong>Documento:</strong> 143.543.567-23</li>
+                    <li><strong>Saldo:</strong> 1500,00</li>
+                </ul>
+                <ul class="botoes">
+                    <button class="add">+</button>
+                    <button class="sub">-</button>
+                </ul>
+            </div> 
+        </section>
+
+    </section>
+
+    <script src="./02.js"></script>
+    <script src="https://kit.fontawesome.com/b3b34daf48.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

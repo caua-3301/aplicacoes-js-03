@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Select</title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(34, 0, 34);
+        }
+
+        h1 {
+            color: rgb(17, 17, 17);
+        }
+
+        #container {
+            display: flex;
+            width: 360px;
+            height: 480px;
+            margin: 40px auto;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 0 rgb(14, 14, 14);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #add {
+            font: normal bolder 1.5em sans-serif;
+            transition: all .8s;
+            background-color: transparent;
+            border: none;
+            margin-top: 5px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        #add:hover {
+            transform: scale(110%);
+            border-radius: 20%;
+            transition: all .8s;
+        }
+
+        #insert {
+            display: flex;
+            margin-top: 18px;
+            width: 80%;
+            height: 50px;
+            justify-content: space-between;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        #inputs {
+            display: flex;
+            width: 85%;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        #events {
+            display: flex;
+            padding: 5px;
+            flex-direction: column;
+            background-color: rgba(71, 0, 71, 0.199);
+            border-radius: 15px;
+            overflow-y: scroll;
+            width: 90%;
+            height: 65%;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .my-child {
+            margin-top: 10px;
+            border-width: 0 0 2px 0;
+            border-color: purple;
+            border-style: solid;
+        }
+
+        .info {
+            font: normal normal .8em sans-serif;
+        }
+
+        .even {
+            font: normal normal .9em sans-serif;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <h1 id="title">
+            Event Select
+        </h1>
+        <form id="insert">
+            <div id="inputs">
+                <input type="datetime-local" name="select-data" id="selct-data" required>
+                <input type="text" name="event" id="event" placeholder="Digite o evento" required>
+            </div>
+            <button id="add" type="submit">+</button>
+        </form>
+
+        <section id="events">        
+        </section>
+
+    </section>
+
+    <script src="./01.js"></script>
+    <script src="https://kit.fontawesome.com/b3b34daf48.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
